@@ -1,0 +1,24 @@
+{
+  "name": "hootsuitechallenge",
+  "version": "1.0.0",
+  "description": "A simple server with a Mongo db that has some API functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raztechs/MongoAPIChallenge.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mongo",
+    "hootsuite"
+  ],
+  "author": "Popa Razvan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raztechs/MongoAPIChallenge/issues"
+  },
+  "homepage": "https://github.com/raztechs/MongoAPIChallenge#readme"
+}
