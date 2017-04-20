@@ -4,11 +4,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var TransactionSchema = new Schema({
-	sender_id: {
+	sender: {
 		type: Number,
 		Required: 'Must have a sender_id'
 	},
-	receiver_id: {
+	receiver: {
 		type: Number,
 		Required: 'Must have a receiver_id'
 	},
@@ -22,4 +22,4 @@ var TransactionSchema = new Schema({
 	}
 });
 
-module.exports = mongoose.model('Transaction', TransactionSchema);
+module.exports = mongoose.model('Transactions', TransactionSchema);
