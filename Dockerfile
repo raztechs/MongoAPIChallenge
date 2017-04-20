@@ -1,5 +1,5 @@
-FROM nodejs:7.9
+FROM node:boron
 
-ADD: . /opt/web-server
-WORKDIR: /opt/web-server
+COPY . /opt/web-server
+WORKDIR /opt/web-server
 RUN npm install
