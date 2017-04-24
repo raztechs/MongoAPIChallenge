@@ -36,7 +36,7 @@ exports.add_new_transaction = function(req, res) {
 	});
 };
 
-exports.database_query = function(req, res) {
+exports.db_query_user = function(req, res) {
 	if (hasKeys(req.query, ['user', 'day', 'threshold'])) {
 		var user = parseInt(req.query.user),
 			day = parseInt(req.query.day),
@@ -48,7 +48,13 @@ exports.database_query = function(req, res) {
                             res.send(err);
                         res.json(transaction);
                     });
-	} else if (hasKeys(req.query, ['user', 'since', 'until'])) {
+	} else {
+        res.json({message: "Wrong params"});
+    };
+};
+
+exports.db_get_balance = function(req, res) {
+    if (hasKeys(req.query, ['user', 'since', 'until'])) {
         var user = parseInt(req.query.user),
             since = parseInt(req.query.since),
             until = parseInt(req.query.until),
@@ -83,5 +89,5 @@ exports.database_query = function(req, res) {
             });
     } else {
         res.json({message: "Wrong params"});
-    }
+    };
 };

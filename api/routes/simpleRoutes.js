@@ -5,5 +5,8 @@ module.exports = function(app){
 
 	app.route('/transactions/')
 		.post(mongoAPI.add_new_transaction)
-		.get(mongoAPI.database_query);
+		.get(mongoAPI.db_query_user);
+
+	app.route('/balance/')
+		.get(mongoAPI.db_get_balance);
 };
